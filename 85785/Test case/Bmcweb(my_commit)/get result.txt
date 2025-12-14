@@ -1,0 +1,211 @@
+nono@nono-VirtualBox:~/Desktop/Redfish-Service-Validator$ curl -k -sS -H "X-Auth-Token: $TOKEN" \
+  https://127.0.0.1:2443/redfish/v1/Managers/bmc | jq
+{
+  "@odata.id": "/redfish/v1/Managers/bmc",
+  "@odata.type": "#Manager.v1_15_0.Manager",
+  "Actions": {
+    "#Manager.Reset": {
+      "@Redfish.ActionInfo": "/redfish/v1/Managers/bmc/ResetActionInfo",
+      "target": "/redfish/v1/Managers/bmc/Actions/Manager.Reset"
+    },
+    "#Manager.ResetToDefaults": {
+      "ResetType@Redfish.AllowableValues": [
+        "ResetAll"
+      ],
+      "target": "/redfish/v1/Managers/bmc/Actions/Manager.ResetToDefaults"
+    }
+  },
+  "DateTime": "2025-12-14T10:09:06+00:00",
+  "DateTimeLocalOffset": "+00:00",
+  "Description": "Baseboard Management Controller",
+  "EthernetInterfaces": {
+    "@odata.id": "/redfish/v1/Managers/bmc/EthernetInterfaces"
+  },
+  "FirmwareVersion": "3.0.0-dev-dirty",
+  "GraphicalConsole": {
+    "ConnectTypesSupported": [
+      "KVMIP"
+    ],
+    "MaxConcurrentSessions": 4,
+    "ServiceEnabled": true
+  },
+  "Id": "bmc",
+  "LastResetTime": "2025-12-14T10:03:57+00:00",
+  "Links": {
+    "ActiveSoftwareImage": {
+      "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/9e5641e0"
+    },
+    "ManagerForChassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/BMC_0"
+      }
+    ],
+    "ManagerForChassis@odata.count": 1,
+    "ManagerForServers": [
+      {
+        "@odata.id": "/redfish/v1/Systems/system"
+      }
+    ],
+    "ManagerForServers@odata.count": 1,
+    "ManagerInChassis": {
+      "@odata.id": "/redfish/v1/Chassis/BMC_0"
+    },
+    "SoftwareImages": [
+      {
+        "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/9e5641e0"
+      }
+    ],
+    "SoftwareImages@odata.count": 1
+  },
+  "LogServices": {
+    "@odata.id": "/redfish/v1/Managers/bmc/LogServices"
+  },
+  "ManagerDiagnosticData": {
+    "@odata.id": "/redfish/v1/Managers/bmc/ManagerDiagnosticData"
+  },
+  "ManagerType": "BMC",
+  "Model": "OpenBmc",
+  "Name": "OpenBmc Manager",
+  "NetworkProtocol": {
+    "@odata.id": "/redfish/v1/Managers/bmc/NetworkProtocol"
+  },
+  "Oem": {
+    "OpenBmc": {
+      "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc",
+      "@odata.type": "#OpenBMCManager.v1_1_0.Manager",
+      "Certificates": {
+        "@odata.id": "/redfish/v1/Managers/bmc/Truststore/Certificates"
+      },
+      "Fan": {
+        "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan",
+        "@odata.type": "#OpenBMCManager.v1_1_0.Manager.Fan",
+        "FanControllers": {
+          "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanControllers",
+          "@odata.type": "#OpenBMCManager.v1_1_0.Manager.FanControllers",
+          "FAN_1_8": {
+            "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanControllers/FAN_1_8",
+            "@odata.type": "#OpenBMCManager.v1_1_0.Manager.FanController",
+            "DCoefficient": 0,
+            "FFGainCoefficient": 1,
+            "FFOffCoefficient": 0,
+            "ICoefficient": 0,
+            "ILimitMax": 0,
+            "ILimitMin": 0,
+            "Inputs": [
+              "SYS_FAN1_ROTOR1",
+              "SYS_FAN2_ROTOR1"
+            ],
+            "NegativeHysteresis": 0,
+            "OutLimitMax": 100,
+            "OutLimitMin": 35,
+            "Outputs": [
+              "PWM_FAN1",
+              "PWM_FAN2"
+            ],
+            "PCoefficient": 0,
+            "PositiveHysteresis": 0,
+            "SlewNeg": 0,
+            "SlewPos": 0,
+            "Zones": [
+              {
+                "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanZones/BMC_0"
+              }
+            ]
+          }
+        },
+        "FanZones": {
+          "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanZones",
+          "@odata.type": "#OpenBMCManager.v1_1_0.Manager.FanZones",
+          "BMC_0": {
+            "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanZones/BMC_0",
+            "@odata.type": "#OpenBMCManager.v1_1_0.Manager.FanZone",
+            "Chassis": {
+              "@odata.id": "/redfish/v1/Chassis/BMC_0"
+            },
+            "FailSafePercent": 100,
+            "MinThermalOutput": 35
+          }
+        },
+        "PidControllers": {
+          "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/PidControllers",
+          "@odata.type": "#OpenBMCManager.v1_1_0.Manager.PidControllers",
+          "CPU0_TEMP": {
+            "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/PidControllers/CPU0_TEMP",
+            "@odata.type": "#OpenBMCManager.v1_1_0.Manager.PidController",
+            "CheckHysteresisWithSetpoint": true,
+            "DCoefficient": 0,
+            "FFGainCoefficient": 0,
+            "FFOffCoefficient": 0,
+            "ICoefficient": 0.2,
+            "ILimitMax": 100,
+            "ILimitMin": 0,
+            "Inputs": [
+              "CPU0_Temp"
+            ],
+            "NegativeHysteresis": 1,
+            "OutLimitMax": 100,
+            "OutLimitMin": 0,
+            "PCoefficient": 4,
+            "PositiveHysteresis": 1,
+            "SetPoint": 85,
+            "SlewNeg": 0,
+            "SlewPos": 0,
+            "Zones": [
+              {
+                "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanZones/BMC_0"
+              }
+            ]
+          }
+        },
+        "Profile@Redfish.AllowableValues": [],
+        "StepwiseControllers": {
+          "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/StepwiseControllers",
+          "@odata.type": "#OpenBMCManager.v1_1_0.Manager.StepwiseControllers",
+          "AMB_TEMP": {
+            "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/StepwiseControllers/AMB_TEMP",
+            "@odata.type": "#OpenBMCManager.v1_1_0.Manager.StepwiseController",
+            "Direction": "Ceiling",
+            "Inputs": [
+              "AMB_TEMP"
+            ],
+            "Steps": [
+              {
+                "Output": 35,
+                "Target": 21
+              },
+              {
+                "Output": 35,
+                "Target": 26
+              },
+              {
+                "Output": 45,
+                "Target": 31
+              },
+              {
+                "Output": 60,
+                "Target": 36
+              },
+              {
+                "Output": 70,
+                "Target": 41
+              }
+            ],
+            "Zones": [
+              {
+                "@odata.id": "/redfish/v1/Managers/bmc#/Oem/OpenBmc/Fan/FanZones/BMC_0"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "PowerState": "On",
+  "ServiceEntryPointUUID": "888172eb-c260-47c7-81d0-416c905e569f",
+  "ServiceIdentification": "",
+  "Status": {
+    "Health": "OK",
+    "State": "Starting"
+  },
+  "UUID": "0f76ddcf-3941-4109-936d-1e2cbe3eff93"
+}

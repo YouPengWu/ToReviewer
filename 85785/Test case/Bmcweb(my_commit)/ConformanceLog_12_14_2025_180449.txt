@@ -1,0 +1,961 @@
+INFO - Redfish Service Validator, version 2.5.1
+INFO - 
+INFO - Writing config file to log directory
+INFO - Target URI: https://127.0.0.1:2443
+INFO - authtype: Session
+collectionlimit: ['LogEntry', '20']
+debugging: False
+forceauth: False
+ip: https://127.0.0.1:2443
+logdir: ./logs
+oemcheck: True
+password: ******
+requestattempts: 10
+requesttimeout: 10
+schema_directory: ./SchemaFiles/metadata
+uricheck: False
+username: root
+verbose: 0
+INFO - Start time: 12/14/25 - 18:04:49
+INFO - 
+INFO - Setting up service...
+INFO - Constructing metadata...
+WARNING - Metadata Warning: Problem parsing $metadata document: 'str' object has no attribute 'namespace' ...  
+INFO - NOT writing online XML to file: RedfishExtensions_v1.xml
+INFO - Redfish Version of Service: 1.17.0
+INFO - Description of service: System Under Test - Root Service version 1.17.0, 888172eb-c260-47c7-81d0-416c905e569f
+INFO - 
+*** Validating /redfish/v1/
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  at /redfish/v1/
+INFO - 	 Type (ServiceRoot.v1_15_0.ServiceRoot), GET SUCCESS (time: 0:00:00.089822)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Cables
+INFO - 	 Type (CableCollection.CableCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/CertificateService
+INFO - 	 Type (CertificateService.v1_0_0.CertificateService), GET SUCCESS (time: 0:00:00.000012)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/CertificateService/CertificateLocations
+INFO - 	 Type (CertificateLocations.v1_0_0.CertificateLocations), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/TelemetryService
+INFO - 	 Type (TelemetryService.v1_2_1.TelemetryService), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/TelemetryService/MetricReportDefinitions
+INFO - 	 Type (MetricReportDefinitionCollection.MetricReportDefinitionCollection), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/TelemetryService/MetricReports
+INFO - 	 Type (MetricReportCollection.MetricReportCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/TelemetryService/Triggers
+INFO - 	 Type (TriggersCollection.TriggersCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/UpdateService
+INFO - 	 Type (UpdateService.v1_11_1.UpdateService), GET SUCCESS (time: 0:00:00.000012)
+WARNING - Deprecated Property Warning: The given property HttpPushUri is deprecated: This property has been deprecated in favor of the `MultipartHttpPushUri` property. ...  at /redfish/v1/UpdateService
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/UpdateService/FirmwareInventory
+INFO - 	 Type (SoftwareInventoryCollection.SoftwareInventoryCollection), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/UpdateService/FirmwareInventory/9e5641e0
+INFO - 	 Type (SoftwareInventory.v1_1_0.SoftwareInventory), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems
+INFO - 	 Type (ComputerSystemCollection.ComputerSystemCollection), GET SUCCESS (time: 0:00:00.000017)
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Systems
+INFO - 	 PASS
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Systems
+INFO - 
+*** Validating /redfish/v1/Systems/system
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Systems/system
+INFO - 	 Type (ComputerSystem.v1_22_0.ComputerSystem), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/FabricAdapters
+INFO - 	 Type (FabricAdapterCollection.FabricAdapterCollection), GET SUCCESS (time: 0:00:00.000043)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/Bios
+INFO - 	 Type (Bios.v1_1_0.Bios), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/Memory
+INFO - 	 Type (MemoryCollection.MemoryCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/Storage
+INFO - 	 Type (StorageCollection.StorageCollection), GET SUCCESS (time: 0:00:00.000012)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/ResetActionInfo
+INFO - 	 Type (ActionInfo.v1_1_2.ActionInfo), GET SUCCESS (time: 0:00:00.023002)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/Processors
+INFO - 	 Type (ProcessorCollection.ProcessorCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices
+INFO - 	 Type (LogServiceCollection.LogServiceCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/EventLog
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/EventLog/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/Dump
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/Dump/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/HostLogger
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Systems/system/LogServices/HostLogger/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis
+INFO - 	 Type (ChassisCollection.ChassisCollection), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0
+INFO - 	 Type (Chassis.v1_22_0.Chassis), GET SUCCESS (time: 0:00:00.000014)
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Chassis/BMC_0
+INFO - 	 PASS
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Chassis/BMC_0
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/PowerSubsystem
+INFO - 	 Type (PowerSubsystem.v1_1_0.PowerSubsystem), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/PowerSubsystem/PowerSupplies
+INFO - 	 Type (PowerSupplyCollection.PowerSupplyCollection), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/ThermalSubsystem
+INFO - 	 Type (ThermalSubsystem.v1_0_0.ThermalSubsystem), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/ThermalSubsystem/Fans
+INFO - 	 Type (FanCollection.FanCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/ThermalSubsystem/ThermalMetrics
+INFO - 	 Type (ThermalMetrics.v1_0_1.ThermalMetrics), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/EnvironmentMetrics
+INFO - 	 Type (EnvironmentMetrics.v1_3_0.EnvironmentMetrics), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/Sensors
+INFO - 	 Type (SensorCollection.SensorCollection), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/Assembly
+INFO - 	 Type (Assembly.v1_5_1.Assembly), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Chassis/BMC_0/ResetActionInfo
+INFO - 	 Type (ActionInfo.v1_1_2.ActionInfo), GET SUCCESS (time: 0:00:00.016885)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers
+INFO - 	 Type (ManagerCollection.ManagerCollection), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc
+INFO - 	 Type (Manager.v1_15_0.Manager), GET SUCCESS (time: 0:00:00.000017)
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Managers/bmc
+INFO - 	 PASS
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  at /redfish/v1/Managers/bmc
+ERROR - RedfishObject Error: Zones should be a dictionary or None, but it's of type RedfishObject... ...  at /redfish/v1/Managers/bmc
+ERROR - RedfishObject Error: Zones should be a dictionary or None, but it's of type RedfishObject... ...  at /redfish/v1/Managers/bmc
+ERROR - RedfishObject Error: Zones should be a dictionary or None, but it's of type RedfishObject... ...  at /redfish/v1/Managers/bmc
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/ManagerDiagnosticData
+INFO - 	 Type (ManagerDiagnosticData.v1_2_0.ManagerDiagnosticData), GET SUCCESS (time: 0:00:00.000026)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/EthernetInterfaces
+INFO - 	 Type (EthernetInterfaceCollection.EthernetInterfaceCollection), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/EthernetInterfaces/eth0
+INFO - 	 Type (EthernetInterface.v1_9_0.EthernetInterface), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/EthernetInterfaces/eth1
+INFO - 	 Type (EthernetInterface.v1_9_0.EthernetInterface), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/EthernetInterfaces/eth2
+INFO - 	 Type (EthernetInterface.v1_9_0.EthernetInterface), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/EthernetInterfaces/eth3
+INFO - 	 Type (EthernetInterface.v1_9_0.EthernetInterface), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/NetworkProtocol
+INFO - 	 Type (ManagerNetworkProtocol.v1_9_0.ManagerNetworkProtocol), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates
+INFO - 	 Type (CertificateCollection.CertificateCollection), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/NetworkProtocol/HTTPS/Certificates/1
+INFO - 	 Type (Certificate.v1_0_0.Certificate), GET SUCCESS (time: 0:00:00.000030)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices
+INFO - 	 Type (LogServiceCollection.LogServiceCollection), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTE7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIyMGMzNTt0PTYyOWE2MmNkYjIwYWM7eD1jNGQyNWYwOWU1ZTcyMTg3
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTI7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIyZjk2Njt0PTYyOWE2MmNkYzBkZDM7eD1iY2FlZjE3OWQ1YWZlYzA4
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTM7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIyZmVmMTt0PTYyOWE2MmNkYzEzNmQ7eD04MTkzNzFjMGVlODUwNjhi
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTQ7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMDBjMzt0PTYyOWE2MmNkYzE1NDA7eD0xMzNjOTRjZjEzNTQwYTlh
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTU7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMDI3ODt0PTYyOWE2MmNkYzE2ZjU7eD05ZDJkOTdhYmExYTk0ZmU2
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTY7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMDRhYjt0PTYyOWE2MmNkYzE5Mjc7eD1jMTdjYTkyMWUzZjkyZGQ0
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTc7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMDc0NDt0PTYyOWE2MmNkYzFiYzE7eD05ZWZkNDM3MjQxOGY1NzVk
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTg7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMDhlMDt0PTYyOWE2MmNkYzFkNWU7eD02MTVkMjgzNGYwNjNlNjM2
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTk7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMGE3Nzt0PTYyOWE2MmNkYzFlZjU7eD04ZTA1MjE4NmI4NjQ2NDJl
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWE7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMGMyZDt0PTYyOWE2MmNkYzIwYWE7eD1mMTJlOGExZjJkOGUxODA2
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWI7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMGRjOTt0PTYyOWE2MmNkYzIyNDc7eD05NmQ2YWE1MjliNDA5ZTZh
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWM7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMGY2NTt0PTYyOWE2MmNkYzIzZTM7eD1jNTI4YTdhMmZkNTVmNTFh
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWQ7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMTEwMDt0PTYyOWE2MmNkYzI1N2U7eD00ZTljNzA3Y2U2MmU3M2Nj
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWU7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMTJiYzt0PTYyOWE2MmNkYzI3Mzk7eD1mNGYwMzg3ZDcxODZjNTdj
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPWY7Yj0zOTc1ODAxNTFhNGY0ODUzODFiMTRiMTAwMzM1NDM1ZjttPWIzMTU3MTt0PTYyOWE2MmNkYzI5ZTQ7eD05MzY5MDNkYWI2OWIyNmM5
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTEwO2I9Mzk3NTgwMTUxYTRmNDg1MzgxYjE0YjEwMDMzNTQzNWY7bT1iMzE3MTk7dD02MjlhNjJjZGMyYjk2O3g9MTY5MDgxNWQyOGI4MzhiMA==
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTExO2I9Mzk3NTgwMTUxYTRmNDg1MzgxYjE0YjEwMDMzNTQzNWY7bT1iMzE5ZDk7dD02MjlhNjJjZGMyZTUxO3g9NTMzMTkyOTM5ZWI1ZGRlMQ==
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTEyO2I9Mzk3NTgwMTUxYTRmNDg1MzgxYjE0YjEwMDMzNTQzNWY7bT1iMzFiYjA7dD02MjlhNjJjZGMzMDJhO3g9MzUwOTYwNDRmZTAzODU2Yw==
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTEzO2I9Mzk3NTgwMTUxYTRmNDg1MzgxYjE0YjEwMDMzNTQzNWY7bT1iMzFkYTg7dD02MjlhNjJjZGMzMjIxO3g9YjBhYzgxMGFjOWQ0NmE4MA==
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Journal/Entries/cz1lMzJiOTUxZGU4OGY0MzRjYThjNmI2NjNlMjE2NzVmZDtpPTE0O2I9Mzk3NTgwMTUxYTRmNDg1MzgxYjE0YjEwMDMzNTQzNWY7bT1iMzFmNjE7dD02MjlhNjJjZGMzM2RlO3g9YjZhOWQ4MmZlOGFjMWJhZA==
+INFO - 	 Type (LogEntry.v1_9_0.LogEntry), GET SUCCESS (time: 0)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Dump
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/Dump/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000067)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/FaultLog
+INFO - 	 Type (LogService.v1_2_0.LogService), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/LogServices/FaultLog/Entries
+INFO - 	 Type (LogEntryCollection.LogEntryCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Managers/bmc/ResetActionInfo
+INFO - 	 Type (ActionInfo.v1_1_2.ActionInfo), GET SUCCESS (time: 0:00:00.015029)
+INFO - 	 PASS
+ERROR - Payload Link Error: Zones#0 is expected to be an object containing @odata.id ...  
+ERROR - Payload Link Error: Zones#0 is expected to be an object containing @odata.id ...  
+ERROR - Payload Link Error: Zones#0 is expected to be an object containing @odata.id ...  
+INFO - 
+*** Validating /redfish/v1/TaskService
+INFO - 	 Type (TaskService.v1_1_4.TaskService), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/TaskService/Tasks
+INFO - 	 Type (TaskCollection.TaskCollection), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService
+INFO - 	 Type (SessionService.v1_0_2.SessionService), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService/Sessions
+INFO - 	 Type (SessionCollection.SessionCollection), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService/Sessions/cybmik0O4l
+INFO - 	 Type (Session.v1_7_0.Session), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService
+WARNING - Schema Warning: Couldn't get schema for OemObject, skipping OpenBMC ...  at /redfish/v1/AccountService
+INFO - 	 Type (AccountService.v1_15_0.AccountService), GET SUCCESS (time: 0:00:00.000013)
+WARNING - Additional Property Warning: AuthMethods not defined in schema Complex OpenBMC Resource.OemObject (check version, spelling and casing) ...  at /redfish/v1/AccountService
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/MultiFactorAuth/ClientCertificate/Certificates
+INFO - 	 Type (CertificateCollection.CertificateCollection), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/LDAP/Certificates
+INFO - 	 Type (CertificateCollection.CertificateCollection), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts
+INFO - 	 Type (ManagerAccountCollection.ManagerAccountCollection), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts/root
+INFO - 	 Type (ManagerAccount.v1_7_0.ManagerAccount), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles
+INFO - 	 Type (RoleCollection.RoleCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Administrator
+INFO - 	 Type (Role.v1_2_2.Role), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Operator
+INFO - 	 Type (Role.v1_2_2.Role), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/ReadOnly
+INFO - 	 Type (Role.v1_2_2.Role), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/EventService
+INFO - 	 Type (EventService.v1_5_0.EventService), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/EventService/Subscriptions
+INFO - 	 Type (EventDestinationCollection.EventDestinationCollection), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries
+INFO - 	 Type (MessageRegistryFileCollection.MessageRegistryFileCollection), GET SUCCESS (time: 0:00:00.000024)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/Base
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/Base/Base
+INFO - 	 Type (MessageRegistry.v1_6_2.MessageRegistry), GET SUCCESS (time: 0:00:00.032414)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/HeartbeatEvent
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/HeartbeatEvent/HeartbeatEvent
+INFO - 	 Type (MessageRegistry.v1_6_2.MessageRegistry), GET SUCCESS (time: 0:00:00.015962)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/OpenBMC
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/OpenBMC/OpenBMC
+INFO - 	 Type (MessageRegistry.v1_4_0.MessageRegistry), GET SUCCESS (time: 0:00:00.037169)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/ResourceEvent
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000022)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/ResourceEvent/ResourceEvent
+INFO - 	 Type (MessageRegistry.v1_6_0.MessageRegistry), GET SUCCESS (time: 0:00:00.019360)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/TaskEvent
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/TaskEvent/TaskEvent
+INFO - 	 Type (MessageRegistry.v1_4_1.MessageRegistry), GET SUCCESS (time: 0:00:00.014023)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/Telemetry
+INFO - 	 Type (MessageRegistryFile.v1_1_0.MessageRegistryFile), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/Registries/Telemetry/Telemetry
+INFO - 	 Type (MessageRegistry.v1_6_2.MessageRegistry), GET SUCCESS (time: 0:00:00.015167)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas
+INFO - 	 Type (JsonSchemaFileCollection.JsonSchemaFileCollection), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/AccountService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ActionInfo
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/AggregationService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/AggregationSource
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/AggregationSourceCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Assembly
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/AttributeRegistry
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Bios
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Cable
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/CableCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Certificate
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/CertificateCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/CertificateLocations
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/CertificateService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Chassis
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ChassisCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ComponentIntegrity
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000023)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ComponentIntegrityCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ComputerSystem
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ComputerSystemCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Drive
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/DriveCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EnvironmentMetrics
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EthernetInterface
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EthernetInterfaceCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Event
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EventDestination
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EventDestinationCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/EventService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/FabricAdapter
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/FabricAdapterCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000022)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Fan
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/FanCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/IPAddresses
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/JsonSchemaFile
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/JsonSchemaFileCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/LogEntry
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/LogEntryCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/LogService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/LogServiceCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Manager
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ManagerAccount
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ManagerAccountCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ManagerCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ManagerDiagnosticData
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ManagerNetworkProtocol
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Memory
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MemoryCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Message
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MessageRegistry
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MessageRegistryCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MessageRegistryFile
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MessageRegistryFileCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricDefinition
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricDefinitionCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricReport
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricReportCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricReportDefinition
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/MetricReportDefinitionCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/OpenBMCManager
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/OperatingConfig
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/OperatingConfigCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PCIeDevice
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PCIeDeviceCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PCIeFunction
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PCIeFunctionCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PCIeSlots
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PhysicalContext
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Port
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PortCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Power
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PowerSubsystem
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PowerSupply
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/PowerSupplyCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Privileges
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Processor
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ProcessorCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Protocol
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Redundancy
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Resource
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Role
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/RoleCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Sensor
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/SensorCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ServiceRoot
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Session
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/SessionCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/SessionService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Settings
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/SoftwareInventory
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/SoftwareInventoryCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Storage
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/StorageCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/StorageController
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/StorageControllerCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000016)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Task
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/TaskCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/TaskService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/TelemetryService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Thermal
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ThermalMetrics
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000012)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/ThermalSubsystem
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000013)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/Triggers
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/TriggersCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/UpdateService
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/VirtualMedia
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/VirtualMediaCollection
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000015)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/odata
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/odata-v4
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000017)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/redfish-error
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/redfish-payload-annotations
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/redfish-schema
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/JsonSchemas/redfish-schema-v1
+INFO - 	 Type (JsonSchemaFile.v1_0_2.JsonSchemaFile), GET SUCCESS (time: 0:00:00.000014)
+INFO - 	 PASS
+INFO - Metadata: Namespaces missing from $metadata: set()
+INFO - 
+Elapsed time: 0:00:30
+INFO - 
+Listing any warnings and errors: 
+INFO -  
+INFO - /redfish/v1/
+INFO - Warnings
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  
+INFO -  
+INFO - /redfish/v1/UpdateService
+INFO - Warnings
+WARNING - Deprecated Property Warning: The given property HttpPushUri is deprecated: This property has been deprecated in favor of the `MultipartHttpPushUri` property. ...  
+INFO -  
+INFO - /redfish/v1/Systems
+INFO - Warnings
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  
+INFO -  
+INFO - /redfish/v1/Systems/system
+INFO - Warnings
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  
+INFO -  
+INFO - /redfish/v1/Chassis/BMC_0
+INFO - Warnings
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  
+INFO -  
+INFO - /redfish/v1/Managers/bmc
+INFO - Warnings
+WARNING - Warning: Schema not found for HostedStorageServices.HostedStorageServices ...  
+INFO -  
+INFO - /redfish/v1/AccountService
+INFO - Warnings
+WARNING - Schema Warning: Couldn't get schema for OemObject, skipping OpenBMC ...  
+WARNING - Additional Property Warning: AuthMethods not defined in schema Complex OpenBMC Resource.OemObject (check version, spelling and casing) ...  
+INFO - 
+Results Summary:
+INFO - Pass: 4477, Fail: 0, Warning: 10
+INFO - Validation has succeeded.
