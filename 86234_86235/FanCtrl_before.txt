@@ -1,0 +1,41 @@
+root@evb-ast2600:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/AMB_TEMP_STEP
+NAME                                       TYPE      SIGNATURE RESULT/VALUE FLAGS
+org.freedesktop.DBus.Introspectable        interface -         -            -
+.Introspect                                method    -         s            -
+org.freedesktop.DBus.Peer                  interface -         -            -
+.GetMachineId                              method    -         s            -
+.Ping                                      method    -         -            -
+org.freedesktop.DBus.Properties            interface -         -            -
+.Get                                       method    ss        v            -
+.GetAll                                    method    s         a{sv}        -
+.Set                                       method    ssv       -            -
+.PropertiesChanged                         signal    sa{sv}as  -            -
+xyz.openbmc_project.Debug.Pid.ThermalPower interface -         -            -
+.ClassType                                 property  s         ""           emits-change
+.Input                                     property  d         0            emits-change
+.Leader                                    property  s         ""           emits-change
+.Output                                    property  d         0            emits-change
+.Setpoint                                  property  d         0            emits-change
+xyz.openbmc_project.Object.Enable          interface -         -            -
+.Enabled                                   property  b         true         emits-change writable
+root@evb-ast2600:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/CPU0_TEMP_PID
+NAME                                       TYPE      SIGNATURE RESULT/VALUE  FLAGS
+org.freedesktop.DBus.Introspectable        interface -         -             -
+.Introspect                                method    -         s             -
+org.freedesktop.DBus.Peer                  interface -         -             -
+.GetMachineId                              method    -         s             -
+.Ping                                      method    -         -             -
+org.freedesktop.DBus.Properties            interface -         -             -
+.Get                                       method    ss        v             -
+.GetAll                                    method    s         a{sv}         -
+.Set                                       method    ssv       -             -
+.PropertiesChanged                         signal    sa{sv}as  -             -
+xyz.openbmc_project.Debug.Pid.ThermalPower interface -         -             -
+.ClassType                                 property  s         "Temperature" emits-change
+.Input                                     property  d         25            emits-change
+.Leader                                    property  s         "CPU0_TEMP"   emits-change
+.Output                                    property  d         0             emits-change
+.Setpoint                                  property  d         83            emits-change
+xyz.openbmc_project.Object.Enable          interface -         -             -
+.Enabled                                   property  b         true          emits-change writable
+root@evb-ast2600:~#
