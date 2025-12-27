@@ -1,0 +1,51 @@
+root@evb-ast2600:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/AMB_TEMP_STEP
+NAME                                       TYPE      SIGNATURE RESULT/VALUE                             FLAGS
+org.freedesktop.DBus.Introspectable        interface -         -                                        -
+.Introspect                                method    -         s                                        -
+org.freedesktop.DBus.Peer                  interface -         -                                        -
+.GetMachineId                              method    -         s                                        -
+.Ping                                      method    -         -                                        -
+org.freedesktop.DBus.Properties            interface -         -                                        -
+.Get                                       method    ss        v                                        -
+.GetAll                                    method    s         a{sv}                                    -
+.Set                                       method    ssv       -                                        -
+.PropertiesChanged                         signal    sa{sv}as  -                                        -
+xyz.openbmc_project.Debug.Pid.ThermalPower interface -         -                                        -
+.Class                                     property  s         "xyz.openbmc_project.Debug.Pid.Therma... emits-change
+.Input                                     property  d         25                                       emits-change
+.Leader                                    property  s         "AMBIENT_TEMP"                           emits-change
+.Output                                    property  d         40                                       emits-change
+.Setpoint                                  property  d         nan                                      emits-change
+.Type                                      property  s         "xyz.openbmc_project.Debug.Pid.Therma... emits-change
+xyz.openbmc_project.Object.Enable          interface -         -                                        -
+.Enabled                                   property  b         true                                     emits-change writable
+root@evb-ast2600:~# busctl get-property xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/AMB_TEMP_STEP xyz.openbmc_project.Debug.Pid.ThermalPower Class
+s "xyz.openbmc_project.Debug.Pid.ThermalPower.ClassType.Temperature"
+root@evb-ast2600:~# busctl get-property xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/AMB_TEMP_STEP xyz.openbmc_project.Debug.Pid.ThermalPower Type
+s "xyz.openbmc_project.Debug.Pid.ThermalPower.ControllerType.Stepwise"
+
+root@evb-ast2600:~# busctl introspect xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/CPU0_TEMP_PID
+NAME                                       TYPE      SIGNATURE RESULT/VALUE                             FLAGS
+org.freedesktop.DBus.Introspectable        interface -         -                                        -
+.Introspect                                method    -         s                                        -
+org.freedesktop.DBus.Peer                  interface -         -                                        -
+.GetMachineId                              method    -         s                                        -
+.Ping                                      method    -         -                                        -
+org.freedesktop.DBus.Properties            interface -         -                                        -
+.Get                                       method    ss        v                                        -
+.GetAll                                    method    s         a{sv}                                    -
+.Set                                       method    ssv       -                                        -
+.PropertiesChanged                         signal    sa{sv}as  -                                        -
+xyz.openbmc_project.Debug.Pid.ThermalPower interface -         -                                        -
+.Class                                     property  s         "xyz.openbmc_project.Debug.Pid.Therma... emits-change
+.Input                                     property  d         25                                       emits-change
+.Leader                                    property  s         "CPU0_TEMP"                              emits-change
+.Output                                    property  d         0                                        emits-change
+.Setpoint                                  property  d         83                                       emits-change
+.Type                                      property  s         "xyz.openbmc_project.Debug.Pid.Therma... emits-change
+xyz.openbmc_project.Object.Enable          interface -         -                                        -
+.Enabled                                   property  b         true                                     emits-change writable
+root@evb-ast2600:~# busctl get-property xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/CPU0_TEMP_PID xyz.openbmc_project.Debug.Pid.ThermalPower Class
+s "xyz.openbmc_project.Debug.Pid.ThermalPower.ClassType.Temperature"
+root@evb-ast2600:~# busctl get-property xyz.openbmc_project.State.FanCtrl /xyz/openbmc_project/settings/fanctrl/zone0/CPU0_TEMP_PID xyz.openbmc_project.Debug.Pid.ThermalPower Type
+s "xyz.openbmc_project.Debug.Pid.ThermalPower.ControllerType.PID"
